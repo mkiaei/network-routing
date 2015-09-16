@@ -3,8 +3,10 @@
 ------------
 DESCRIPTION
 ------------
-Simulation framework for demand routing in a mesh network.\\
-version 1.0 2015-08-30\\
+Simulation framework for demand routing in a mesh network.
+
+version 1.0 2015-08-30
+
 Author: Mohammad Kiaei
 
 -----
