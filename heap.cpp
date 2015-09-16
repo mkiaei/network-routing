@@ -120,10 +120,7 @@ void Heap::print()
 
 void Heap::swap(int i, int j)
 {
-	int aux = heap[i];
-	heap[i] = heap[j];
-	heap[j] = aux;
-
+	std::swap(heap[i], heap[j]);
 	elements[heap[i]].index = i;
 	elements[heap[j]].index = j;
 }
