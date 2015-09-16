@@ -17,7 +17,7 @@ NOTES
 ------------
 CONTENTS
 ------------
-- README		                This file
+- README                        This file
 
 - C++ files:
     network.cpp, network.h      Network class code
@@ -25,6 +25,7 @@ CONTENTS
     solution.cpp, solution.h    Solution class code
     heap.cpp, heap.h            Heap data structure code
     util.cpp, util.h            Utility functions code
+    main.cpp                    Driver program
 
 - Sample topology files
     COST239.top                 COST-239 Topology file
