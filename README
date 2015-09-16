@@ -17,7 +17,7 @@ NOTES
 ------------
 CONTENTS
 ------------
-- README		This file
+- README		                This file
 
 - C++ files:
     network.cpp, network.h      Network class code
