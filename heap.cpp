@@ -88,16 +88,16 @@ int Heap::deleteMin()
 }
 /******************************************************************************/
 
-void Heap::changeKey(int idx, double newKey)
+void Heap::changeKey(int idx, double new_key)
 {
-	if (elements[idx].key > newKey)
+	if (elements[idx].key > new_key)
 	{
-		elements[idx].key = newKey;
+		elements[idx].key = new_key;
 		heapfyUp(elements[idx].index);
 	} 
 	else
 	{
-		elements[idx].key = newKey;
+		elements[idx].key = new_key;
 		heapfyDown(elements[idx].index);
 	}
 }
