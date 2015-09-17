@@ -26,7 +26,6 @@ Heap::Heap(int *hp, Element *el, int n)
 
 void Heap::heapfyDown(int root)
 {
-	//cout << "HEAPFYDOWN" << endl;
 	int child = 2 * root;
 	int parent = root;
 
@@ -35,8 +34,6 @@ void Heap::heapfyDown(int root)
 		if (child < size && elements[heap[child]].key > elements[heap[child+1]].key)
 			child++;
 
-		//cout << "parent " << parent << ": " << heap[parent] << "-" << elements[heap[parent]].key;
-		//cout << "   child " << child << ": "<< heap[child] << "-" << elements[heap[child]].key << endl;
 		if (elements[heap[parent]].key <= elements[heap[child]].key) 
 			break;
 		else
@@ -51,15 +48,12 @@ void Heap::heapfyDown(int root)
 
 void Heap::heapfyUp(int root)
 {
-	//cout << "HEAPFYUP" << endl;
 	double root_key = elements[heap[root]].key;
 	int parent = root/2;
 	int child = root;
 
 	while (parent >= 1)
 	{
-		//cout << "parent " << parent << ": " << heap[parent] << "-" << elements[heap[parent]].key;
-		//cout << "   child " << child << ": "<< heap[child] << "-" << elements[heap[child]].key << endl;
 		if (root_key >= elements[heap[parent]].key) 
 			break;
 		else
