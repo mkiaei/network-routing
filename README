@@ -12,7 +12,7 @@ NOTES
 - A heap implementation of Dijkstra's shortest path algorithm is used for routing demands.
 - Network topology is read from a ".top" file.
 - Demand set is read from a ".dem" file.
-- Program tested in Visual C++ 2010 Express and g++ version 4.8.4.
+- Program is tested in Visual C++ 2010 Express and g++ version 4.8.4.
 
 ------------
 CONTENTS
@@ -27,10 +27,10 @@ CONTENTS
     util.cpp, util.h            Utility functions code
     main.cpp                    Driver program
 
-- Sample topology files
+- Sample topology files:
     COST239.top                 COST-239 Topology file
     9N17L.top                   Topology file for a network with 9 nodes and 17 links
 
-- Sample demand file
+- Sample demand file:
     9N17L.dem                   Demand set for 9N17L network
 
