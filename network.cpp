@@ -158,8 +158,6 @@ list<int> Network::dijkstra(int src, int dst)
 				previous[y] = edge;
 			}
 		}
-
-		//heap.print();
 	}
 
 	y = dst;
@@ -238,7 +236,7 @@ void Network::print()
 		for (current = adj_list[i].begin(); current != adj_list[i].end(); current++)
 			cout << (*current).node << " - ";
 		cout << endl;
-	}//*/
+	}
 }
 /******************************************************************************/
 
