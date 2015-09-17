@@ -38,7 +38,6 @@ void Solution::calculateWorkingPaths()
 	{
 		source = traffic->demands[k].node1;
 		dest = traffic->demands[k].node2;
-		//cout << "dijkstra " << traffic->demands[k].id << endl;
 		work_paths[k] = network->dijkstra(source, dest);
 	}
 }
