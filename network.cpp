@@ -138,9 +138,9 @@ list<int> Network::dijkstra(int src, int dst)
 	heap.changeKey(src, 0);
 	//heap.print();
 
-	while (heap.getSize() > 0)
+	while (!heap.empty())
 	{
-		x = heap.deleteMin();
+		x = heap.pop();
 		if (x == dst) 
 			break;
 
