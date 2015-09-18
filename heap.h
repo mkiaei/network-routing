@@ -33,8 +33,8 @@ public:
 	~Heap();
 	void buildHeap();
 	void changeKey(int e, double newKey);
-	int deleteMin();
-	int getSize();
+	int pop();
+	int empty();
 	void print();
 };
 
