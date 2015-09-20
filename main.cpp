@@ -13,6 +13,7 @@
 int main(int argc, char * argv[])
 {
     string top_filename, dem_filename;
+    
     if (argc == 3)
     {
         top_filename = argv[1];
