@@ -25,14 +25,14 @@ int main(int argc, char * argv[])
         dem_filename = "9N17L.dem";
     }
 
-	Network network(top_filename.data());
-	network.print();
+    Network network(top_filename.data());
+    network.print();
 
-	Traffic traffic(dem_filename.data(), &network);
-	traffic.print();
+    Traffic traffic(dem_filename.data(), &network);
+    traffic.print();
 
-	Solution solution(&network, &traffic);
-	solution.print();
+    Solution solution(&network, &traffic);
+    solution.print();
 
-	cin.get();
+    cin.get();
 }
