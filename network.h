@@ -36,7 +36,7 @@ typedef struct
 
 class Network
 {
-public:
+public:	
 	int num_nodes, num_links;
 	list<ListElement> *adj_list;
 	vector<vector<int> > adj_matrix;

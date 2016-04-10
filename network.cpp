@@ -213,7 +213,7 @@ void Network::print()
 	cout << "\nLinks: " << endl;
 	for (int i = 0; i < num_links; i++)
 	{
-		cout << links[i].id << " - " << nodes[links[i].node1].id << " ";
+		cout  << left << setw(2) << links[i].id << " - " << nodes[links[i].node1].id << " ";
 		cout << nodes[links[i].node2].id << "   "<< links[i].cost << endl;
 	}
 
@@ -221,7 +221,7 @@ void Network::print()
 	for (int i = 0; i < num_nodes; i++)
 	{
 		for (int j = 0; j < num_nodes; j++)
-			cout << adj_matrix[i][j] << " ";
+			cout << left << setw(2) << adj_matrix[i][j] << " ";
 		cout << endl;
 	}
 

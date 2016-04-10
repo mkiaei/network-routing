@@ -10,7 +10,7 @@
 #define _TRAFFIC_
 
 #include "network.h"
- 
+
 struct Demand
 {
 	int node1, node2;
