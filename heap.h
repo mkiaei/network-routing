@@ -29,7 +29,7 @@ class Heap
 
 public:
 	Heap(int n);
-	Heap(int *h, Element *e, int n);
+	Heap(int *h, Element *e, int size_);
 	~Heap();
 	void buildHeap();
 	void changeKey(int e, double newKey);

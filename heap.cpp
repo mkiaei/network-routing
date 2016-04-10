@@ -16,11 +16,11 @@ Heap::Heap(int n)
 }
 /******************************************************************************/
 
-Heap::Heap(int *hp, Element *el, int n)
+Heap::Heap(int *hp, Element *el, int size_)
 {
 	elements = el;
 	heap = hp;
-	size = n;
+	size = size_;
 }
 /******************************************************************************/
 
