@@ -59,8 +59,8 @@ void Network::readNetwork(const char *filename)
 		} while (word != "NODE");
 		word.clear();
 		
-		getline(network_file, line);
-		while (line.size() > 0 && line[0] == 'N')
+		while (getline(network_file, line) &&
+			line.size() > 0 && line[0] == 'N')
 		{
 			iss.clear();
 			iss.str(line);
@@ -71,7 +71,6 @@ void Network::readNetwork(const char *filename)
 			node.y = atoi(size_x);
 			node.size = atoi(size);
 			nodes.push_back(node);
-			getline(network_file, line);
 		}
 
 		num_nodes = nodes.size();
@@ -84,8 +83,8 @@ void Network::readNetwork(const char *filename)
 			iss >> word;
 		} while (word != "LINK");
 
-		getline(network_file, line);
-		while (line.size() > 0 && line[0] == 'L')
+		while (getline(network_file, line) &&
+			line.size() > 0 && line[0] == 'L')
 		{
 			iss.clear();
 			iss.str(line);
@@ -101,7 +100,6 @@ void Network::readNetwork(const char *filename)
 			link.node2 = atoi(str.data());
 
 			links.push_back(link);
-			getline(network_file, line);
 		}
 
 		num_links = links.size();
