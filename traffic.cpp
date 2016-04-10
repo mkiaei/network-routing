@@ -35,7 +35,7 @@ Traffic::Traffic(const char *filename, Network *net)
 // Argument: Demands file name
 void Traffic::readDemands(const char *filename)
 {
-	char node1[10], node2[10];
+	string node1, node2;
 	int units, id;
 	
 	ifstream traffic_file(filename);
@@ -52,9 +52,8 @@ void Traffic::readDemands(const char *filename)
 			iss >> word;
 		} while (word != "DEMAND");
 
-		while (!traffic_file.eof())
+		while (getline(traffic_file, line))
 		{
-			getline(traffic_file, line);
 			if (line.size() > 0 && line[0] == 'N')
 			{
 				iss.clear();

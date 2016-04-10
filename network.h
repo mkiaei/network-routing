@@ -16,7 +16,7 @@ typedef struct
 {
 	int x, y;
 	int size;
-	char id[10];
+	string id;
 } Node;
 
 typedef struct
@@ -25,7 +25,7 @@ typedef struct
 	int node2;
 	int cost;
 	int id;
-	char name[10];
+	string name;
 } Link;
 
 typedef struct
@@ -47,7 +47,7 @@ public:
 	Network(const char *top_fileName);
 	~Network();
 
-	int getNodeIndex(const char *id);
+	int getNodeIndex(const string &id);
 	int getLinkIndex(int id);
 	void print();
 	void readNetwork(const char *fileName);

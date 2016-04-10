@@ -180,11 +180,11 @@ list<int> Network::dijkstra(int src, int dst)
 
 // getNodeIndex: Find the node index based on node id
 // Argument: node id
-int Network::getNodeIndex(const char *id)
+int Network::getNodeIndex(const string &id)
 {
 	for (int i = 0; i < num_nodes; i++)
 	{
-		if (strcmp(nodes[i].id, id) == 0)
+		if (nodes[i].id == id)
 			return i;
 	}
 	cerr << "Invalid Node Index!\n";
