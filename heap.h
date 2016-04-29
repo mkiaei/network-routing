@@ -23,8 +23,8 @@ class Heap
 	Element *elements;
 	int size;
 
-	void heapfyDown(int root);
-	void heapfyUp(int root);
+	void heapifyDown(int root);
+	void heapifyUp(int root);
 	void swap(int i, int j);
 
 public:
@@ -32,7 +32,7 @@ public:
 	Heap(int *h, Element *e, int size_);
 	~Heap();
 	void buildHeap();
-	void changeKey(int e, double newKey);
+	void changeKey(int idx, double new_key);
 	int pop();
 	int empty();
 	void print();

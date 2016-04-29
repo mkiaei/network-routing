@@ -24,7 +24,7 @@ Heap::Heap(int *hp, Element *el, int size_)
 }
 /******************************************************************************/
 
-void Heap::heapfyDown(int root)
+void Heap::heapifyDown(int root)
 {
 	int child = 2 * root;
 	int parent = root;
@@ -46,13 +46,13 @@ void Heap::heapfyDown(int root)
 }
 /******************************************************************************/
 
-void Heap::heapfyUp(int root)
+void Heap::heapifyUp(int root)
 {
 	double root_key = elements[heap[root]].key;
 	int parent = root/2;
 	int child = root;
 
-	while (parent >= 1)
+	while (parent > 0)
 	{
 		if (root_key >= elements[heap[parent]].key) 
 			break;
@@ -69,7 +69,7 @@ void Heap::heapfyUp(int root)
 void Heap::buildHeap()
 {
 	for (int i = size/2; i > 0; i--)
-		heapfyDown(i);
+		heapifyDown(i);
 }
 /******************************************************************************/
 
@@ -77,7 +77,7 @@ int Heap::pop()
 {
 	swap(1, size);
 	size--;
-	heapfyDown(1);
+	heapifyDown(1);
 	return heap[size + 1];
 }
 /******************************************************************************/
@@ -87,12 +87,12 @@ void Heap::changeKey(int idx, double new_key)
 	if (elements[idx].key > new_key)
 	{
 		elements[idx].key = new_key;
-		heapfyUp(elements[idx].index);
+		heapifyUp(elements[idx].index);
 	} 
 	else
 	{
 		elements[idx].key = new_key;
-		heapfyDown(elements[idx].index);
+		heapifyDown(elements[idx].index);
 	}
 }
 /******************************************************************************/
