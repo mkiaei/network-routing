@@ -20,11 +20,11 @@ CONTENTS
 - README                        This file
 
 - C++ files:
-    network.cpp, network.h      Network class code
-    traffic.cpp, traffic.h      Traffic class code
-    solution.cpp, solution.h    Solution class code
-    heap.cpp, heap.h            Heap data structure code
-    util.cpp, util.h            Utility functions code
+    network.cpp, network.h      Network class implementation
+    traffic.cpp, traffic.h      Traffic class implementation
+    solution.cpp, solution.h    Solution class implementation
+    heap.cpp, heap.h            Heap data structure
+    util.cpp, util.h            Utility functions
     main.cpp                    Driver program
 
 - Sample topology files:
