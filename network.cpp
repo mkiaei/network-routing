@@ -21,7 +21,7 @@ Network::Network(const char *filename)
 	for (int i = 0; i < num_nodes; i++)
 		adj_matrix[i].resize(num_nodes, 0);
 
-	adj_list = new list<ListElement> [num_nodes];
+	adj_list.resize(num_nodes);
 
 	for (int i = 0; i < num_links; i++)
 	{
@@ -242,6 +242,5 @@ void Network::print()
 // Network destructor
 Network::~Network()
 {
-	delete [] adj_list;
 }
 /******************************************************************************/
