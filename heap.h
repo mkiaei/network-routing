@@ -25,11 +25,10 @@ class Heap
 
 	void heapifyDown(int root);
 	void heapifyUp(int root);
-	void swap(int i, int j);
+	void swapElements(int i, int j);
 
 public:
-	Heap(int n);
-	Heap(int *h, Element *e, int size_);
+	Heap(vector<int> &hp, vector<Element> &el);
 	~Heap();
 	void buildHeap();
 	void changeKey(int idx, double new_key);
