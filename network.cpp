@@ -118,12 +118,13 @@ void Network::readNetwork(const char *filename)
 list<int> Network::dijkstra(int src, int dst)
 {
 	int edge, x, y;
-	vector<int> previous(num_nodes);
-
-	int *heap_array = new int[num_nodes + 1];
-	Element *elements = new Element[num_nodes];
-	Heap heap(heap_array, elements, num_nodes);
 	list<int> path;
+
+	vector<int> previous(num_nodes);
+	vector<int> heap_array(num_nodes + 1);
+	vector<Element> elements(num_nodes);
+	
+	Heap heap(heap_array, elements);
 
 	for (int i = 0; i < num_nodes; i++)
 	{
