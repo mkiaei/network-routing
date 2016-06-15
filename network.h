@@ -38,7 +38,7 @@ class Network
 {
 public:	
 	int num_nodes, num_links;
-	list<ListElement> *adj_list;
+	vector<list<ListElement> > adj_list;
 	vector<vector<int> > adj_matrix;
 	vector<Link> links;
 	vector<Node> nodes;
