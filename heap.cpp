@@ -30,7 +30,7 @@ void Heap::heapifyDown(int root)
 			break;
 		else
 		{ 
-			swap(parent, child);
+			swapElements(parent, child);
 			parent = child;
 			child *= 2;
 		}
