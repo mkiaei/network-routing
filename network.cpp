@@ -160,18 +160,15 @@ list<int> Network::dijkstra(int src, int dst)
 	}
 
 	y = dst;
-	//cout << "Path - ";
 	do
 	{
 		edge = previous[y];
 		x = links[edge].node1;
 		if (x == y)
 			x = links[edge].node2;
-		//cout << edge << ":" << x << "," << y << " ";
 		path.push_back(edge);
 		y = x;
 	} while (x != src);
-	//cout << endl;
 
 	return path;
 }
