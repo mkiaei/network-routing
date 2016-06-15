@@ -50,7 +50,7 @@ void Heap::heapifyUp(int root)
 			break;
 		else
 		{ 
-			swap(parent, child);
+			swapElements(parent, child);
 			child = parent;
 			parent = parent/2;
 		}
@@ -67,7 +67,7 @@ void Heap::buildHeap()
 
 int Heap::pop()
 {
-	swap(1, size);
+	swapElements(1, size);
 	size--;
 	heapifyDown(1);
 	return heap[size + 1];
