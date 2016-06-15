@@ -8,19 +8,11 @@
 
 #include "heap.h"
 
-Heap::Heap(int n)
+Heap::Heap(vector<int> &hp, vector<Element> &el)
 {
-	heap = new int[n+1];
-	elements = new Element[n];
-	size = 0;
-}
-/******************************************************************************/
-
-Heap::Heap(int *hp, Element *el, int size_)
-{
-	elements = el;
-	heap = hp;
-	size = size_;
+	elements = &el[0];
+	heap = &hp[0];
+	size = el.size();
 }
 /******************************************************************************/
 
@@ -112,9 +104,9 @@ void Heap::print()
 }
 /******************************************************************************/
 
-void Heap::swap(int i, int j)
+void Heap::swapElements(int i, int j)
 {
-	std::swap(heap[i], heap[j]);
+	swap(heap[i], heap[j]);
 	elements[heap[i]].index = i;
 	elements[heap[j]].index = j;
 }
@@ -122,7 +114,5 @@ void Heap::swap(int i, int j)
 
 Heap::~Heap()
 {
-	delete [] elements;
-	delete [] heap;
 }
 /******************************************************************************/
