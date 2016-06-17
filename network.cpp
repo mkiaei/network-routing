@@ -188,7 +188,7 @@ int Network::getNodeIndex(const string &id)
 }
 /******************************************************************************/
 
-// getNodeIndex: Find the link index based on link id
+// getLinkIndex: Find the link index based on link id
 // Argument: link id
 int Network::getLinkIndex(int id)
 {
