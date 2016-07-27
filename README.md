@@ -11,8 +11,6 @@
 - Program is tested in Visual C++ 2010 Express and g++ version 4.8.4.
 
 ## Contents
-* **README**: This file
-
 * C++ files
   * **network.cpp, network.h**:      Network class implementation
   * **traffic.cpp, traffic.h**:      Traffic class implementation
