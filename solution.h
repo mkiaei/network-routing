@@ -25,11 +25,8 @@ public:
 
 	void calculateWorkingPaths();
 
-	/// Print the solution to the standard output
-	void print();
-
-	/// Print the solution into a file
-	void print(const char *fileName);
+	/// Print the solution to an output stream
+	void print(ostream &out);
 };
 
 #endif
