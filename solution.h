@@ -17,7 +17,7 @@ class Solution
 public:
 	Network *network;
 	Traffic *traffic;
-	list<int> *work_paths;
+	vector<list<int> > work_paths;
 
 	Solution();
 	Solution(Network *net, Traffic *traff);
