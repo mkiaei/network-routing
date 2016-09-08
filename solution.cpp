@@ -13,7 +13,6 @@ Solution::Solution()
 {
 	network = NULL;
 	traffic = NULL;
-	work_paths = NULL;
 }
 /******************************************************************************/
 
@@ -23,7 +22,7 @@ Solution::Solution(Network *net, Traffic *traff)
 {
 	network = net;
 	traffic = traff;
-	work_paths = new list<int>[traffic->num_demands];
+	work_paths.resize(traffic->num_demands);
 
 	calculateWorkingPaths();
 }
@@ -68,6 +67,5 @@ void Solution::print(ostream &out)
 // Solution destructor
 Solution::~Solution()
 {
-	delete [] work_paths;
 }
 /******************************************************************************/
