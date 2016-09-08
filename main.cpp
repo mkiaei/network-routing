@@ -32,7 +32,7 @@ int main(int argc, char * argv[])
     traffic.print();
 
     Solution solution(&network, &traffic);
-    solution.print();
+    solution.print(cout);
 
     cin.get();
 }
