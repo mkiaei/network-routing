@@ -43,50 +43,25 @@ void Solution::calculateWorkingPaths()
 }
 /******************************************************************************/
 
-void Solution::print()
+void Solution::print(ostream &out)
 {
-	cout << "\n*** SOLUTION ***" << endl;
+	out << "\n*** SOLUTION ***" << endl;
 
-	cout << "-- WORKING ROUTES:" << endl;
+	out << "-- WORKING ROUTES:" << endl;
 	for (int k = 0; k < traffic->num_demands; k++)
 	{
-		cout << traffic->demands[k].id << " - ";
+		out << traffic->demands[k].id << " - ";
 
 		for (list<int>::iterator e = work_paths[k].begin(); e != work_paths[k].end(); e++)
 		{
-			//cout << network->links[*e].id << "  ";
-			cout << network->nodes[network->links[*e].node1].id << "-";
-			cout << network->nodes[network->links[*e].node2].id << "   ";
+			//out << network->links[*e].id << "  ";
+			out << network->nodes[network->links[*e].node1].id << "-";
+			out << network->nodes[network->links[*e].node2].id << "   ";
 		}
-		cout << endl;
+		out << endl;
 	}
 
-	cout << endl;
-}
-/******************************************************************************/
-
-void Solution::print(const char *fileName)
-{
-	ofstream fcout(fileName);
-
-	fcout << "\n*** SOLUTION ***" << endl;
-
-	fcout << "-- WORKING ROUTES:" << endl;
-	for (int k = 0; k < traffic->num_demands; k++)
-	{
-		fcout << traffic->demands[k].id << "  -  ";
-
-		for (list<int>::iterator e = work_paths[k].begin(); e != work_paths[k].end(); e++)
-		{
-			//fcout << network->links[*e].id << "  ";
-			fcout << network->nodes[network->links[*e].node1].id << "-";
-			fcout << network->nodes[network->links[*e].node2].id << "   ";
-		}
-		fcout << endl;
-	}
-
-	fcout << endl;
-	fcout.close();
+	out << endl;
 }
 /******************************************************************************/
 
